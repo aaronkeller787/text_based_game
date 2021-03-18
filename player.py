@@ -13,14 +13,6 @@ class Player():
         self.player_gold = player_gold
 
 
-class Dice:
-
-    def __init__(self, sides):
-        self.sides = sides
-    
-        
-    def roll(self):
-        return random.randint(1, self.sides)
 
         
 
