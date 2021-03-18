@@ -12,6 +12,11 @@ class Player():
         self.player_power = player_power
         self.player_gold = player_gold
 
+class Classes(Player):
+
+    def __init__(self, player_class):
+        self.player_class = player_class
+
 
 
         
