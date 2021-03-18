@@ -1,17 +1,27 @@
 #!/usr/bin/env python3
+import os
+from os import system
 from time import sleep
+
 from dungeon import intro, room_one
 from player import Player
 
 
 def welcome():
-    pass
+
+    os.system('clear')
+
+    print('\t##################################################################################')
+    print('\t##############     W e l c o m e  t o  S p a c e  M a r i n e s     ##############')
+    print('\t##################################################################################')
+
 
 
 if __name__=="__main__":
+
+    welcome()
+
     new_player = Player(input('Please enter your character name: '), 10, 5, 1)
-    print(f'Welcome {new_player.char_name}, to Space Marines')
-    print(f'You start off with {new_player.player_gold} gold, and {new_player.player_hp} hit points')
     new_player.player_stats.update({'Name': {new_player.char_name}, 'HP': {new_player.player_hp}, 'Power': {new_player.player_power},'Gold':{new_player.player_gold}})
     
     
