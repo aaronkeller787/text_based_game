@@ -3,6 +3,7 @@
 from time import sleep
 from program_functions import print_slow
 
+
 def intro():
     print('Tutorial Room')
 
@@ -23,22 +24,20 @@ You have a choice: (S)tay as you are and tempt fate, or put on the uniform and (
         choice = input('Please enter in your selection:  ')
 
         if choice == 'T':
-            text = '''You hurriddly remove the clothes from the body and put them on. You drag the body to the middle of the room, face down, so the guards cound not see the wound.
+            text = '''You hurridly remove the clothes from the body and put them on. You drag the body to the middle of the room, face down, so the guards cound not see the wound.
 You move back to the corner of the room and try to assume the same position the body was in. You close your eyes, slump your head, and wait for the door to open.
 The door rushes open and you hear footsteps enter the room. Too afraid to open your eyes, you slow your breathing as the footsteps drawn closer to you.
 The guards each grab one of your arms and drag you out of the room. You feel the atmosphere change, and the steps from the guards echo. You are drug around a corner and you barely open your eye
 to check your surroundings. You see a long white hallway, terminated by a door. Above the door, you can barely make out what is says, Crematory. The guards open the door and drag you inside.
 They lift you up onto a cold steel table, turn and leave the room.'''
             print_slow(text)
-            print('You have chosen to trade places')
             room_two()
             break
             
         elif choice == 'S':
             text = '''As you stand over the body, you hear a the doors rush open, and two armed guards enter the room. One guard walk towards you, and punches you in the stomach.
-You crumble to the ground gasping for air. The guard who hit you begins to laugh, pulls out his knife, and stabs you in the chest. As you lie on the floor bleeding out,
+Your weak body crumbles to the ground, gasping for air. The guard who hit you begins to laugh, pulls out his knife, and stabs you in the chest. As you lie on the floor bleeding out,
 you regret not taking a chance to escape.'''
-            #print('You have decided to stay')
             print_slow(text)
             print('\n')
             print_slow('Game Over...')

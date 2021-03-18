@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import random
 
 class Player():
 
@@ -11,8 +12,15 @@ class Player():
         self.player_power = player_power
         self.player_gold = player_gold
 
+
+class Dice:
+
+    def __init__(self, sides):
+        self.sides = sides
     
         
+    def roll(self):
+        return random.randint(1, self.sides)
 
         
 
