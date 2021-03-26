@@ -6,19 +6,21 @@ class Races():
 
     def __init__(self, race_name, weight, lifespan, adulthood, size, speed, languages, common_traits):
         self.race_name = race_name
-        self.race_weight = input('Please enter your weight: ')
+        self.race_weight = weight
         self.lifespan = lifespan
         self.adulthood = adulthood
         self.size = size
         self.speed = speed
-        self.languages = {}
-        self.common_traits = []
+        self.languages = languages
+        self.common_traits = common_traits
 
 ###### Halfling and Subraces ######
 
 class Halfling(Races):
 
-    def __init__(self, bonus_dexterity):
+    bonus_dexterity = 2
+
+    def __init__(self):
         self.race_name = 'Halfling'
         self.race_weight = input('Please enter your weight, between 37 and 45: ')
         self.lifespan = 150
@@ -26,28 +28,32 @@ class Halfling(Races):
         self.size = 'Small'
         self.speed = 25
         self.languages = {'Language1': 'Common', 'Language2': 'Halfling'}
-        self.bonus_dexterity = 2
         self.common_traits = ['Lucky', 'Brave', 'Halfling numbleness']
 
 class Lightfoot(Halfling):
 
-    def __init__(self, bonus_charisma, subrace_trait):
+    bonus_charisma = 1
+    subrace_trait = ['Naturally Stealthy']
+    
+    def __init__(self):
         self.race_name = 'Lightfoot'
-        self.bonus_charisma = 1
-        self.subrace_trait = [bonus_charisma,'Naturally Stealthy']
+
 
 class Stout(Halfling):
 
-    def __init__(self, bonus_constitution, subrace_trait):
+    bonus_constitution = 1
+
+    def __init__(self,subrace_trait):
         self.race_name = 'Stout'
-        self.bonus_constitution = 1
-        self.subrace_trait = [bonus_constitution,'Stout Resilliance']
+        self.subrace_trait = ['Stout Resilliance']
         
 ###### Gnome and Subraces ########
 
 class Gnome(Races):
     
-    def __init__(self, bonus_intelligence):
+    bonus_intelligence = 2
+
+    def __init__(self):
         self.race_name = 'Gnome'
         self.race_weight = input('Please enter your weight, between 37 and 45: ')
         self.lifespan = 425
@@ -55,14 +61,14 @@ class Gnome(Races):
         self.size = 'Small'
         self.speed = 25
         self.languages = {'Language1': 'Common', 'Language2': 'Gnomish'}
-        self.bonus_intelligence = 2
         self.common_traits = ['Dark Vision', 'Gnome Cunning']
 
 class ForestGnome(Gnome):
 
-    def __init__(self,bonus_dexterity,subrace_trait):
+    bonus_dexterity = 1
+
+    def __init__(self,subrace_trait):
         self.race_name = 'Forest Gnome'
-        self.bonus_dexterity = 1
         self.subrace_trait = [bonus_dexterity,'Natural Illusionist','Speak with Small Beasts']
 
 class RockGnome(Gnome):
@@ -106,7 +112,9 @@ class MountainDwarf(Dwarf):
 
 class Elf(Races):
 
-    def __init__(self, bonus_dexterity):
+    bonus_dexterity = 2
+
+    def __init__(self):
         self.race_name = 'Elf'
         self.race_weight = input('Please enter your weight, between 79 and 180: ')
         self.lifespan = 750
@@ -114,7 +122,6 @@ class Elf(Races):
         self.size = 'Medium'
         self.speed = 30
         self.languages = {'Language1': 'Common', 'Language2': 'Elvish'}
-        self.bonus_dexterity = 2
         self.common_traits = ['Dark Vision', 'Keen Sense', 'Fey Ancestry', 'Trance']
 
 
@@ -139,3 +146,8 @@ class DarkElf(Elf):
         self.race_name = 'Dark Elf'
         self.bonus_charisma = 1
         self.subrace_trait = [bonus_charisma, 'Weapon Training', 'Superior Darkvision', 'Sunlight Sensitivity', 'Drow Magic']
+
+
+if __name__=="__main__":
+    new_race = Lightfoot()
+    print(new_race.bonus_charisma)
