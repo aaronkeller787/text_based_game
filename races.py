@@ -130,12 +130,6 @@ class DarkElf(Elf):
 
 ###### Half Elf ########
 class HalfElf(Races):
-
-    race_name = 'Half Elf'
-    bonus_charisma = 2
-    lifespan = 180
-    adulthood = 20
-    size = 'Medium'
     speed = 30
     languages = ['Common','Elvish']
     common_traits = ['Darkvision', 'Fey Ancestry']
