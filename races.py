@@ -76,7 +76,7 @@ class Dwarf(Races):
     adulthood = 50
     size = 'Medium'
     speed = 25
-    languages = {'Language1': 'Common', 'Language2': 'Dwarvish'}
+    languages = ['Common', 'Dwarvish']
     bonus_constitution = 2
     common_traits = ['Dark Vision', 'Dwarven Resiliance', 'Combat Training', 'Tool Proficiency', 'Stonecunning']
 
@@ -104,7 +104,7 @@ class Elf(Races):
     adulthood = 100
     size = 'Medium'
     speed = 30
-    languages = {'Language1': 'Common', 'Language2': 'Elvish'}
+    languages = ['Common', 'Elvish']
     common_traits = ['Dark Vision', 'Keen Sense', 'Fey Ancestry', 'Trance']
 
     def __init__(self):
@@ -136,6 +136,7 @@ class HalfElf(Races):
     
     
     def __init__(self,third_language,third_skill,fourth_skill,bonus_attributes_one,bonus_attributes_two):
+        self.race_weight = input('Please enter your weight, between 79 and 180: ')
         self.third_language = third_language
         self.third_skill = third_skill
         self.fourth_skill = fourth_skill
@@ -151,6 +152,59 @@ class HalfElf(Races):
         bonus_attributes_one = input('Please select a 2nd attribute: '),
         bonus_attributes_two = input('Please select a 3rd attribute: '),
         )
+
+
+###### Tiefling ########
+class Tiefling(Races):
+
+    race_name = 'Tiefling'
+    bonus_charisma = 2
+    bonus_intelligence = 1
+    lifespan = 85
+    adulthood = 18
+    size = 'Medium'
+    speed = 30
+    languages = ['Common','Infernal']
+    common_traits = ['Dark Vision', 'Hellish Resistance', 'Infernal Legacy']
+
+    def __init__(self):
+        self.race_weight = input('Please enter your weight, between 114 and 238: ')
+
+###### Human ########
+
+
+###### Half-Orc ########
+class HalfOrc(Races):
+
+    race_name = 'Half-Orc'
+    bonus_strength = 2
+    bonus_constitution = 1
+    lifespan = 75
+    adulthood = 14
+    size = 'Medium'
+    speed = 30
+    languages = ['Common','Orc']
+    common_traits = ['Dark Vision', 'Menacing', 'Relentless Endurance', 'Savage Attacks']
+
+    def __init__(self):
+        self.race_weight = input('Please enter your weight, between 144 and 280: ')
+
+
+###### Dragonborn ########
+class Dragonborn(Races):
+
+    race_name = 'Dragonborn'
+    bonus_strength = 2
+    bonus_charisma = 1
+    lifespan = 80
+    adulthood = 15
+    size = 'Medium'
+    speed = 30
+    languages = ['Common','Draconic']
+    common_traits = ['Draconic Ancestry', 'Breath Weapon', 'Damage Resistance']
+
+    def __init__(self):
+        self.race_weight = input('Please enter your weight, between 179 and 367: ')
 
 
 if __name__=="__main__":
