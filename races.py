@@ -171,6 +171,30 @@ class Tiefling(Races):
         self.race_weight = input('Please enter your weight, between 114 and 238: ')
 
 ###### Human ########
+class Human(Races):
+
+    race_name = 'Human'
+    bonus_strength = 1
+    bonus_charisma = 1
+    bonus_intelligence = 1
+    bonus_dexterity = 1
+    bonus_constitution = 1
+    bonus_wisdom = 1
+    lifespan = 80
+    adulthood = 18
+    size = 'Medium'
+    speed = 30
+    languages = ['Common']
+
+    def __init__(self,second_language):
+        self.race_weight = input('Please enter your weight, between 114 and 270: ')
+        self.second_language = second_language
+    
+    @classmethod
+    def get_values(values):
+        return values(
+            second_language = input('Please select a 2nd language: ')
+        )
 
 
 ###### Half-Orc ########
