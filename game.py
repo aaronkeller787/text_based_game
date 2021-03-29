@@ -4,7 +4,7 @@ from os import system
 from time import sleep
 
 from dungeon import intro, room_one
-from player import Player, choose_profession
+from player_classes import Player, choose_profession
 from program_functions import print_slow
 
 
