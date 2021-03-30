@@ -36,8 +36,9 @@ class Halfling(Races):
                 break
             else:
                 print('Please enter a number within the range')
+
         
-    
+
 class Lightfoot(Halfling):
 
     bonus_charisma = 1
@@ -311,7 +312,7 @@ def choose_race():
           "Press 'o' for HalfOrc",'\n',
           "Press 'r' for Dragonborn",'\n'
           )
-    print('\n')
+
     prace=input(">>> ")
 
     if prace == 'h' or prace == 'H':
@@ -327,6 +328,7 @@ def choose_race():
                 Race = Stout()    
         else:
             Race = Halfling()
+
     elif prace == 'g' or prace == 'G':
         response = input('Would you like to choose a subrace? (y/n)')
         if response == 'y':
@@ -381,8 +383,6 @@ def choose_race():
         Race = Dragonborn()
     return Race
 
-
-    
 if __name__=="__main__":
-    new_race = choose_race()
-
+    choose_race()
+    
