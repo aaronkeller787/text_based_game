@@ -7,6 +7,8 @@ from dungeon import intro, room_one
 from player_classes import Player, choose_profession
 from program_functions import print_slow
 
+from races import choose_race
+from races import *
 
 def welcome():
 
@@ -17,10 +19,15 @@ def welcome():
     print('\t          ########################################################################')
     print("\n\n")
 
-    choose_profession()
+    
 
 if __name__=="__main__":
     welcome()
+    new_race = choose_race()
+    print(new_race.race_name)
+
+    
+    
 
    
 
