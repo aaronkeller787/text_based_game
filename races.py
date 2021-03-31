@@ -3,6 +3,10 @@ import os
 
 class Races():
 
+    secondary_languages = ['Halfling', 'Gnomish', 'Dwarvish','Elvish','Infernal','Orcish','Draconic']
+    secondary_skills = ['Athletics', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'Deception', 'Intimidation', 'Performance', 'Persuasion' ]
+    secondary_attributes = ['Strength', 'Intelligence', 'Wisdom', 'Dexterity', 'Constitution', 'Charisma']
+
     def __init__(self, race_name, weight, lifespan, adulthood, size, speed, languages, common_traits, description):
         self.race_name = race_name
         self.race_weight = weight
@@ -38,7 +42,6 @@ class Halfling(Races):
                 print('Please enter a number within the range')
 
         
-
 class Lightfoot(Halfling):
 
     bonus_charisma = 1
@@ -175,6 +178,7 @@ class DarkElf(Elf):
 ###### Half Elf ########
 class HalfElf(Races):
 
+    race_name = 'Half Elf'
     speed = 30
     languages = ['Common','Elvish']
     common_traits = ['Darkvision', 'Fey Ancestry']
@@ -260,7 +264,7 @@ class HalfOrc(Races):
     adulthood = 14
     size = 'Medium'
     speed = 30
-    languages = ['Common','Orc']
+    languages = ['Common','Orcish']
     common_traits = ['Dark Vision', 'Menacing', 'Relentless Endurance', 'Savage Attacks']
     description = ('Half orcs have orc blood running through their veins. This makes them much stronger than normal people, as well as hardy. However, that also can make them act impulsively and savagely.\n' 
     'They often live, or at least used to in orc tribes and may or may not feel the rage of Gruumsh within them (Gruumsh being the orc god). While many of them triumph as leaders in their tribe due to their high IQ in comparison with the others,\n' 
@@ -315,47 +319,47 @@ def choose_race():
 
     prace=input(">>> ")
 
-    if prace == 'h' or prace == 'H':
+    if prace.lower() == 'h':
         response = input('Would you like to choose a subrace? (y/n)')
-        if response == 'y':
+        if response.lower() == 'y':
             print("Which subrace would you like to play?",'\n',
             "Press 'l' for Lightfoot",'\n',
             "Press 's' for Stout",'\n',)
             prace = input(">>> ")
-            if prace == 'l' or prace == 'L':
+            if prace.lower() == 'l':
                 Race = Lightfoot()
-            elif prace == 's' or prace == 'S':
+            elif prace.lower() == 's':
                 Race = Stout()    
         else:
             Race = Halfling()
 
-    elif prace == 'g' or prace == 'G':
+    elif prace.lower() == 'g':
         response = input('Would you like to choose a subrace? (y/n)')
         if response == 'y':
             print("Which subrace would you like to play?",'\n',
             "Press 'f' for Forest Gnome",'\n',
             "Press 'r' for Rock Gnome",'\n',)
             prace = input(">>> ")
-            if prace == 'f' or prace == 'F':
+            if prace.lower() == 'f':
                 Race = ForestGnome()
-            elif prace == 'r' or prace == 'R':
+            elif prace.lower() == 'r':
                 Race = RockGnome()    
         else:
             Race = Gnome()
-    elif prace == 'd' or prace == 'D':
+    elif prace.lower() == 'd':
         response = input('Would you like to choose a subrace? (y/n)')
         if response == 'y':
             print("Which subrace would you like to play?",'\n',
             "Press 'h' for Hill Dwarf",'\n',
             "Press 'm' for Mountain Dwarf",'\n',)
             prace = input(">>> ")
-            if prace == 'h' or prace == 'H':
+            if prace.lower() == 'h':
                 Race = HillDwarf()
-            elif prace == 'm' or prace == 'M':
+            elif prace.lower() == 'm':
                 Race = MountainDwarf()    
         else: 
             Race = Dwarf()
-    elif prace == 'e' or prace == 'E':
+    elif prace.lower() == 'e':
         response = input('Would you like to choose a subrace? (y/n)')
         if response == 'y':
             print("Which subrace would you like to play?",'\n',
@@ -363,26 +367,25 @@ def choose_race():
             "Press 'w' for Wood Elf",'\n',
             "Press 'd' for Drow (Dark Elf)",'\n')
             prace = input(">>> ")
-            if prace == 'h' or prace == 'H':
+            if prace.lower() == 'h':
                 Race = HighElf()
-            elif prace == 'w' or prace == 'W':
+            elif prace.lower() == 'w':
                 Race = WoodElf()    
-            elif prace == 'd' or prace == 'D':
+            elif prace.lower() == 'd':
                 Race = DarkElf()  
         else:
             Race = Elf()
-    elif prace == 'a' or prace == 'A':
+    elif prace.lower() == 'a':
         Race = HalfElf()
-    elif prace == 't' or prace == 'T':
+    elif prace.lower() == 't':
         Race = Tiefling()
-    elif prace == 'n' or prace == 'N':
+    elif prace.lower() == 'n':
         Race = Human()
-    elif prace == 'o' or prace == 'O':
+    elif prace.lower() == 'o':
         Race = HalfOrc()
-    elif prace == 'r' or prace == 'R':
+    elif prace.lower() == 'r':
         Race = Dragonborn()
     return Race
 
-if __name__=="__main__":
-    choose_race()
+
     
