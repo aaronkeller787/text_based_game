@@ -25,10 +25,9 @@ if __name__=="__main__":
     welcome()
     new_race = choose_race()
     print(new_race.race_name)
-
+    os.system('clear')
     print("\n{}\n=====\n{}\n".format(new_race.race_name, new_race.description))
     print("\n{}\n=====\nWeight: {}\nLifespan: {}\nAdulthood Age: {}\nSize: {}\nSpeed: {}\n".format('About', new_race.race_weight, new_race.lifespan, new_race.adulthood, new_race.size, new_race.speed))
-    print(new_race.secondary_languages[0])
 
     
     
