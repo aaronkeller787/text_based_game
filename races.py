@@ -179,6 +179,9 @@ class DarkElf(Elf):
 class HalfElf(Races):
 
     race_name = 'Half Elf'
+    lifespan = 180
+    adulthood = 20
+    size = 'Medium'
     speed = 30
     languages = ['Common','Elvish']
     common_traits = ['Darkvision', 'Fey Ancestry']
@@ -191,11 +194,64 @@ class HalfElf(Races):
                 break
             else:
                 print('Please enter a number within the range')
-        self.third_language = input('Please select a 3rd language: ')
-        self.third_skill = input('Please select a 3rd skill: ')
-        self.fourth_skill = input('Please select a 4th skill: ')
-        self.bonus_attributes_one = input('Please select a 2nd attribute: ')
-        self.bonus_attributes_two = input('Please select a 3rd attribute: ')
+        
+        ### Languages ###
+        while True:
+            os.system('clear')
+            print("\nLanguages\n=====")
+            for s in Races.secondary_languages:
+                print(s)
+            print('\n')
+            self.third_language = input('Please select a 3rd language: ')
+            if self.third_language in Races.secondary_languages:
+                print(self.third_language)
+                break
+            else:
+                print('Please choose a langauge from the list')
+
+        ### Skills ###
+        while True:
+            os.system('clear')
+            print("\nSkills\n=====")
+            for s in Races.secondary_skills:
+                print(s)
+            print('\n')
+            self.third_skill = input('Please select a 3rd skill: ')
+            if self.third_skill in Races.secondary_skills:
+                print(self.third_skill)
+                break
+            else:
+                print('Please choose a skill from the list')
+        
+        while True:
+            self.fourth_skill = input('Please select a 4th skill: ')
+            if self.fourth_skill in Races.secondary_skills:
+                print(self.fourth_skill)
+                break
+            else:
+                print('Please choose a skill from the list')
+
+        ### Attributes ###
+        os.system('clear')
+        while True:
+            print("\nAttributes\n=====")
+            for s in Races.secondary_attributes:
+                print(s)
+            print('\n')
+            self.bonus_attributes_one = input('Please select a 2nd attribute: ')
+            if self.bonus_attributes_one in Races.secondary_attributes:
+                print(self.bonus_attributes_one)
+                break
+            else:
+                print('Please choose an attribute from the list')
+
+        while True:
+            self.bonus_attributes_two = input('Please select a 4th skill: ')
+            if self.bonus_attributes_two in Races.secondary_attributes:
+                print(self.bonus_attributes_two)
+                break
+            else:
+                print('Please choose a skill from the list')
 
 
 ###### Tiefling ########
@@ -246,9 +302,20 @@ class Human(Races):
                 break
             else:
                 print('Please enter a number within the range')
-        self.second_language = input('Please select a 2nd language: ')
-    
 
+        while True:
+            os.system('clear')
+            print("\nLanguages\n=====")
+            for s in Races.secondary_languages:
+                print(s)
+            print('\n')
+            self.second_language = input('Please select a 3rd language: ')
+            if self.sefond_language in Races.secondary_languages:
+                print(self.second_language)
+                break
+            else:
+                print('Please choose a langauge from the list')
+    
         
 #################################################
 # Need to add variant traits for the human race #
