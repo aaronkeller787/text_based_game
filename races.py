@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-class Races():
+class Race():
 
     secondary_languages = ['Halfling', 'Gnomish', 'Dwarvish','Elvish','Infernal','Orcish','Draconic']
     secondary_skills = ['Athletics', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'Deception', 'Intimidation', 'Performance', 'Persuasion' ]
@@ -19,7 +19,7 @@ class Races():
         self.description = description
 
 ###### Halfling and Subraces ######
-class Halfling(Races):
+class Halfling(Race):
 
     bonus_dexterity = 2
     race_name = 'Halfling'
@@ -57,7 +57,7 @@ class Stout(Halfling):
     description = ('Stout halflings have are similar in a certain way to dwarves. They are stout as their name says and have a resistance to poison.')
         
 ###### Gnome and Subraces ########
-class Gnome(Races):
+class Gnome(Race):
     
     bonus_intelligence = 2
     race_name = 'Gnome'
@@ -94,7 +94,7 @@ class RockGnome(Gnome):
     description = ('Rock gnomes are known as the best tinkerers. These hardy beings can create little gadgets or things with a specific purpose, to be used for commodity or to maybe get them out of trouble.')
 
 ###### Dwarf and Subraces ########
-class Dwarf(Races):
+class Dwarf(Race):
 
     race_name = 'Dwarf'
     lifespan = 350
@@ -132,7 +132,7 @@ class MountainDwarf(Dwarf):
     description = ('The mountain and the labor in there has made them stronger. Their skin tends to be lighter toned as well as their stature a bit higher.')
 
 ###### Elf and Subraces ########
-class Elf(Races):
+class Elf(Race):
 
     race_name = 'Elf'
     bonus_dexterity = 2
@@ -176,7 +176,7 @@ class DarkElf(Elf):
     description = ('Drows were banished from the surface world for betraying Corellon, the elven god. That developed a hate from them towards the other elves. However, a very low number are indifferent about the quarrel and decide to go back to the surface in search for adventure. They are normally very charismatic and can master drow magic.')
 
 ###### Half Elf ########
-class HalfElf(Races):
+class HalfElf(Race):
 
     race_name = 'Half Elf'
     lifespan = 180
@@ -199,11 +199,11 @@ class HalfElf(Races):
         while True:
             os.system('clear')
             print("\nLanguages\n=====")
-            for s in Races.secondary_languages:
+            for s in Race.secondary_languages:
                 print(s)
             print('\n')
             self.third_language = input('Please select a 3rd language: ')
-            if self.third_language in Races.secondary_languages:
+            if self.third_language in Race.secondary_languages:
                 print(self.third_language)
                 break
             else:
@@ -213,11 +213,11 @@ class HalfElf(Races):
         while True:
             os.system('clear')
             print("\nSkills\n=====")
-            for s in Races.secondary_skills:
+            for s in Race.secondary_skills:
                 print(s)
             print('\n')
             self.third_skill = input('Please select a 3rd skill: ')
-            if self.third_skill in Races.secondary_skills:
+            if self.third_skill in Race.secondary_skills:
                 print(self.third_skill)
                 break
             else:
@@ -225,7 +225,7 @@ class HalfElf(Races):
         
         while True:
             self.fourth_skill = input('Please select a 4th skill: ')
-            if self.fourth_skill in Races.secondary_skills:
+            if self.fourth_skill in Race.secondary_skills:
                 print(self.fourth_skill)
                 break
             else:
@@ -235,11 +235,11 @@ class HalfElf(Races):
         os.system('clear')
         while True:
             print("\nAttributes\n=====")
-            for s in Races.secondary_attributes:
+            for s in Race.secondary_attributes:
                 print(s)
             print('\n')
             self.bonus_attributes_one = input('Please select a 2nd attribute: ')
-            if self.bonus_attributes_one in Races.secondary_attributes:
+            if self.bonus_attributes_one in Race.secondary_attributes:
                 print(self.bonus_attributes_one)
                 break
             else:
@@ -247,7 +247,7 @@ class HalfElf(Races):
 
         while True:
             self.bonus_attributes_two = input('Please select a 4th skill: ')
-            if self.bonus_attributes_two in Races.secondary_attributes:
+            if self.bonus_attributes_two in Race.secondary_attributes:
                 print(self.bonus_attributes_two)
                 break
             else:
@@ -255,7 +255,7 @@ class HalfElf(Races):
 
 
 ###### Tiefling ########
-class Tiefling(Races):
+class Tiefling(Race):
 
     race_name = 'Tiefling'
     bonus_charisma = 2
@@ -278,7 +278,7 @@ class Tiefling(Races):
                 print('Please enter a number within the range')
 
 ###### Human ########
-class Human(Races):
+class Human(Race):
 
     race_name = 'Human'
     bonus_strength = 1
@@ -306,11 +306,11 @@ class Human(Races):
         while True:
             os.system('clear')
             print("\nLanguages\n=====")
-            for s in Races.secondary_languages:
+            for s in Race.secondary_languages:
                 print(s)
             print('\n')
             self.second_language = input('Please select a 3rd language: ')
-            if self.sefond_language in Races.secondary_languages:
+            if self.sefond_language in Race.secondary_languages:
                 print(self.second_language)
                 break
             else:
@@ -322,7 +322,7 @@ class Human(Races):
 #################################################
 
 ###### Half-Orc ########
-class HalfOrc(Races):
+class HalfOrc(Race):
 
     race_name = 'Half-Orc'
     bonus_strength = 2
@@ -347,7 +347,7 @@ class HalfOrc(Races):
         
 
 ###### Dragonborn ########
-class Dragonborn(Races):
+class Dragonborn(Race):
 
     race_name = 'Dragonborn'
     bonus_strength = 2
