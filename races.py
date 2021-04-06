@@ -246,7 +246,7 @@ class HalfElf(Race):
                 print('Please choose an attribute from the list')
 
         while True:
-            self.bonus_attributes_two = input('Please select a 4th skill: ')
+            self.bonus_attributes_two = input('Please select a 3rd attribute: ')
             if self.bonus_attributes_two in Race.secondary_attributes:
                 print(self.bonus_attributes_two)
                 break
