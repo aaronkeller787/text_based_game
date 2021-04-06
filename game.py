@@ -4,7 +4,7 @@ from os import system
 from time import sleep
 
 from dungeon import intro, room_one
-from player_classes import Player, choose_profession
+from player_classes import PlayerClass, choose_class
 from program_functions import print_slow
 
 from races import choose_race
@@ -29,6 +29,8 @@ if __name__=="__main__":
     print("\n{}\n=====\n{}\n".format(new_race.race_name, new_race.description))
     print("\n{}\n=====\nWeight: {}\nLifespan: {}\nAdulthood Age: {}\nSize: {}\nSpeed: {}\n".format('About', new_race.race_weight, new_race.lifespan, new_race.adulthood, new_race.size, new_race.speed))
 
+    new_class = choose_class()
+    print(new_class.class_name)
     
     
 
