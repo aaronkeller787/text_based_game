@@ -35,10 +35,11 @@ class Halfling(Race):
     def __init__(self):
         
         while True:
-            self.race_weight = int(input('Please enter your weight, between 37 and 45: '))
-            if self.race_weight >= 37 and self.race_weight <= 45:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 37 and 45: '))
+                if self.race_weight >= 37 and self.race_weight <= 45:
+                    break
+            except:
                 print('Please enter a number within the range')
 
         
@@ -73,10 +74,11 @@ class Gnome(Race):
     def __init__(self):
 
         while True:
-            self.race_weight = int(input('Please enter your weight, between 37 and 45: '))
-            if self.race_weight >= 37 and self.race_weight <= 45:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 37 and 45: '))
+                if self.race_weight >= 37 and self.race_weight <= 45:
+                    break
+            except:
                 print('Please enter a number within the range')
 
 class ForestGnome(Gnome):
@@ -110,10 +112,11 @@ class Dwarf(Race):
     def __init__(self):
 
         while True:
-            self.race_weight = int(input('Please enter your weight, between 119 and 226: '))
-            if self.race_weight >= 119 and self.race_weight <= 226:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 119 and 226: '))
+                if self.race_weight >= 119 and self.race_weight <= 226:
+                    break
+            except:
                 print('Please enter a number within the range')
  
 
@@ -148,10 +151,11 @@ class Elf(Race):
 
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 79 and 180: '))
-            if self.race_weight >= 79 and self.race_weight <= 180:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 79 and 180: '))
+                if self.race_weight >= 79 and self.race_weight <= 180:
+                    break
+            except:
                 print('Please enter a number within the range')
      
 class HighElf(Elf):
@@ -189,10 +193,11 @@ class HalfElf(Race):
     
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 79 and 180: '))
-            if self.race_weight >= 79 and self.race_weight <= 180:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 79 and 180: '))
+                if self.race_weight >= 79 and self.race_weight <= 180:
+                    break
+            except:
                 print('Please enter a number within the range')
         
         ### Languages ###
@@ -271,10 +276,11 @@ class Tiefling(Race):
 
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 114 and 238: '))
-            if self.race_weight >= 114 and self.race_weight <= 238:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 114 and 238: '))
+                if self.race_weight >= 114 and self.race_weight <= 238:
+                    break
+            except:
                 print('Please enter a number within the range')
 
 ###### Human ########
@@ -297,10 +303,11 @@ class Human(Race):
 
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 114 and 270: '))
-            if self.race_weight >= 114 and self.race_weight <= 270:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 114 and 270: '))
+                if self.race_weight >= 114 and self.race_weight <= 270:
+                    break
+            except:
                 print('Please enter a number within the range')
 
         while True:
@@ -339,10 +346,11 @@ class HalfOrc(Race):
 
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 144 and 280: '))
-            if self.race_weight >= 144 and self.race_weight <= 280:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 144 and 280: '))
+                if self.race_weight >= 144 and self.race_weight <= 280:
+                    break
+            except:
                 print('Please enter a number within the range')
         
 
@@ -363,96 +371,100 @@ class Dragonborn(Race):
 
     def __init__(self):
         while True:
-            self.race_weight = int(input('Please enter your weight, between 179 and 376: '))
-            if self.race_weight >= 179 and self.race_weight <= 376:
-                break
-            else:
+            try:
+                self.race_weight = int(input('Please enter your weight, between 179 and 376: '))
+                if self.race_weight >= 179 and self.race_weight <= 376:
+                    break
+            except:
                 print('Please enter a number within the range')
 
 
 def choose_race():
 
-    print("Which race would you like to play?",'\n',
-          "Press 'h' for Halfling",'\n',
-          "Press 'g for Gnome",'\n',
-          "Press 'd' for Dwarf",'\n',
-          "Press 'e' for Elf",'\n',
-          "Press 'a' for HalfElf",'\n',
-          "Press 't' for Tiefling",'\n',
-          "Press 'n' for Human",'\n',
-          "Press 'o' for HalfOrc",'\n',
-          "Press 'r' for Dragonborn",'\n'
-          )
+    while True:
+        try:
+            print("Which race would you like to play?",'\n',
+                "Press 'h' for Halfling",'\n',
+                "Press 'g for Gnome",'\n',
+                "Press 'd' for Dwarf",'\n',
+                "Press 'e' for Elf",'\n',
+                "Press 'a' for HalfElf",'\n',
+                "Press 't' for Tiefling",'\n',
+                "Press 'n' for Human",'\n',
+                "Press 'o' for HalfOrc",'\n',
+                "Press 'r' for Dragonborn",'\n'
+                )
+            prace=input(">>> ")
 
-    prace=input(">>> ")
-
-    if prace.lower() == 'h':
-        response = input('Would you like to choose a subrace? (y/n)')
-        if response.lower() == 'y':
-            print("Which subrace would you like to play?",'\n',
-            "Press 'l' for Lightfoot",'\n',
-            "Press 's' for Stout",'\n',)
-            prace = input(">>> ")
-            if prace.lower() == 'l':
-                Race = Lightfoot()
-            elif prace.lower() == 's':
-                Race = Stout()    
-        else:
-            Race = Halfling()
-
-    elif prace.lower() == 'g':
-        response = input('Would you like to choose a subrace? (y/n)')
-        if response == 'y':
-            print("Which subrace would you like to play?",'\n',
-            "Press 'f' for Forest Gnome",'\n',
-            "Press 'r' for Rock Gnome",'\n',)
-            prace = input(">>> ")
-            if prace.lower() == 'f':
-                Race = ForestGnome()
-            elif prace.lower() == 'r':
-                Race = RockGnome()    
-        else:
-            Race = Gnome()
-    elif prace.lower() == 'd':
-        response = input('Would you like to choose a subrace? (y/n)')
-        if response == 'y':
-            print("Which subrace would you like to play?",'\n',
-            "Press 'h' for Hill Dwarf",'\n',
-            "Press 'm' for Mountain Dwarf",'\n',)
-            prace = input(">>> ")
             if prace.lower() == 'h':
-                Race = HillDwarf()
-            elif prace.lower() == 'm':
-                Race = MountainDwarf()    
-        else: 
-            Race = Dwarf()
-    elif prace.lower() == 'e':
-        response = input('Would you like to choose a subrace? (y/n)')
-        if response == 'y':
-            print("Which subrace would you like to play?",'\n',
-            "Press 'h' for High Elf",'\n',
-            "Press 'w' for Wood Elf",'\n',
-            "Press 'd' for Drow (Dark Elf)",'\n')
-            prace = input(">>> ")
-            if prace.lower() == 'h':
-                Race = HighElf()
-            elif prace.lower() == 'w':
-                Race = WoodElf()    
+                response = input('Would you like to choose a subrace? (y/n)')
+                if response.lower() == 'y':
+                    print("Which subrace would you like to play?",'\n',
+                    "Press 'l' for Lightfoot",'\n',
+                    "Press 's' for Stout",'\n',)
+                    prace = input(">>> ")
+                    if prace.lower() == 'l':
+                        Race = Lightfoot()
+                    elif prace.lower() == 's':
+                        Race = Stout()
+                else:
+                    Race = Halfling()
+                    
+            elif prace.lower() == 'g':
+                response = input('Would you like to choose a subrace? (y/n)')
+                if response == 'y':
+                    print("Which subrace would you like to play?",'\n',
+                    "Press 'f' for Forest Gnome",'\n',
+                    "Press 'r' for Rock Gnome",'\n',)
+                    prace = input(">>> ")
+                    if prace.lower() == 'f':
+                        Race = ForestGnome()
+                    elif prace.lower() == 'r':
+                        Race = RockGnome()    
+                else:
+                    Race = Gnome()
             elif prace.lower() == 'd':
-                Race = DarkElf()  
-        else:
-            Race = Elf()
-    elif prace.lower() == 'a':
-        Race = HalfElf()
-    elif prace.lower() == 't':
-        Race = Tiefling()
-    elif prace.lower() == 'n':
-        Race = Human()
-    elif prace.lower() == 'o':
-        Race = HalfOrc()
-    elif prace.lower() == 'r':
-        Race = Dragonborn()
-    return Race
+                response = input('Would you like to choose a subrace? (y/n)')
+                if response == 'y':
+                    print("Which subrace would you like to play?",'\n',
+                    "Press 'h' for Hill Dwarf",'\n',
+                    "Press 'm' for Mountain Dwarf",'\n',)
+                    prace = input(">>> ")
+                    if prace.lower() == 'h':
+                        Race = HillDwarf()
+                    elif prace.lower() == 'm':
+                        Race = MountainDwarf()    
+                else: 
+                    Race = Dwarf()
+            elif prace.lower() == 'e':
+                response = input('Would you like to choose a subrace? (y/n)')
+                if response == 'y':
+                    print("Which subrace would you like to play?",'\n',
+                    "Press 'h' for High Elf",'\n',
+                    "Press 'w' for Wood Elf",'\n',
+                    "Press 'd' for Drow (Dark Elf)",'\n')
+                    prace = input(">>> ")
+                    if prace.lower() == 'h':
+                        Race = HighElf()
+                    elif prace.lower() == 'w':
+                        Race = WoodElf()    
+                    elif prace.lower() == 'd':
+                        Race = DarkElf()  
+                else:
+                    Race = Elf()
+            elif prace.lower() == 'a':
+                Race = HalfElf()
+            elif prace.lower() == 't':
+                Race = Tiefling()
+            elif prace.lower() == 'n':
+                Race = Human()
+            elif prace.lower() == 'o':
+                Race = HalfOrc()
+            elif prace.lower() == 'r':
+                Race = Dragonborn()
+            return Race
+        except:
+            print('Please make a valid selection: \n')
 
-
-    
+if __name__=="__main__":
+    choose_race()
