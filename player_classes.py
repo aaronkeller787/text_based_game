@@ -182,45 +182,49 @@ class Wizard(PlayerClass):
 
 def choose_class():
 
-    print("Which class would you like to play?",'\n',
-          "Press b for Barbarian",'\n',
-          "Press a for Bard",'\n',
-          "Press c for Cleric",'\n',
-          "Press d for Druid",'\n',
-          "Press f for Fighter",'\n',
-          "Press m for Monk",'\n',
-          "Press p for Paladin",'\n',
-          "Press r for Ranger",'\n',
-          "Press o for Rogue",'\n',  
-          "Press s for Sorcerer",'\n',
-          "Press w for Warlock",'\n',
-          "Press z for Wizard"
-          )
+    while True:
+        try:
+            print("Which class would you like to play?",'\n',
+                "Press b for Barbarian",'\n',
+                "Press a for Bard",'\n',
+                "Press c for Cleric",'\n',
+                "Press d for Druid",'\n',
+                "Press f for Fighter",'\n',
+                "Press m for Monk",'\n',
+                "Press p for Paladin",'\n',
+                "Press r for Ranger",'\n',
+                "Press o for Rogue",'\n',  
+                "Press s for Sorcerer",'\n',
+                "Press w for Warlock",'\n',
+                "Press z for Wizard"
+                )
 
-    pclass=input(">>> ")
+            pclass=input(">>> ")
 
-    if pclass.lower() == 'b':
-        player_class = Barbarian()
-    elif pclass.lower() == 'a':
-        player_class = Bard()
-    elif pclass.lower() == 'c':
-        player_class = Cleric()
-    elif pclass.lower() == 'd':
-        player_class = Druid()
-    elif pclass.lower() == 'f':
-        player_class = Fighter()
-    elif pclass.lower() == 'm':
-        player_class = Monk()
-    elif pclass.lower() == 'p':
-        player_class = Paladin()
-    elif pclass.lower() == 'r':
-        player_class = Ranger()
-    elif pclass.lower() == 'o':
-        player_class = Rogue()
-    elif pclass.lower() == 's':
-        player_class = Sorcerer()
-    elif pclass.lower() == 'w':
-        player_class = Warlock()
-    elif pclass.lower() == 'z':
-        player_class = Wizard()
-    return player_class
+            if pclass.lower() == 'b':
+                player_class = Barbarian()
+            elif pclass.lower() == 'a':
+                player_class = Bard()
+            elif pclass.lower() == 'c':
+                player_class = Cleric()
+            elif pclass.lower() == 'd':
+                player_class = Druid()
+            elif pclass.lower() == 'f':
+                player_class = Fighter()
+            elif pclass.lower() == 'm':
+                player_class = Monk()
+            elif pclass.lower() == 'p':
+                player_class = Paladin()
+            elif pclass.lower() == 'r':
+                player_class = Ranger()
+            elif pclass.lower() == 'o':
+                player_class = Rogue()
+            elif pclass.lower() == 's':
+                player_class = Sorcerer()
+            elif pclass.lower() == 'w':
+                player_class = Warlock()
+            elif pclass.lower() == 'z':
+                player_class = Wizard()
+            return player_class
+        except:
+            print('Please make a valid selection')
