@@ -7,7 +7,7 @@ from dungeon import intro, room_one
 from player_classes import PlayerClass, choose_class
 from program_functions import print_slow
 
-from races import choose_race
+#from races import choose_race
 from races import *
 
 def welcome():
